@@ -1,0 +1,71 @@
+# Задание 1
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+
+
+def func(a, b):
+    return round(float(a / b), 2)
+
+
+if b == 0:
+    print("на ноль делить нельзя")
+else:
+    print(func(a, b))
+
+# Задание 2
+def func(name, surname, birth, city, email, tel):
+        return(f"Имя - {name}; Фамилия - {surname}; Год рождения - {birth}; Город проживания - {city}; email - {email}; Телефон - {tel}")
+
+print(func(name="Светлана",
+           surname="Р*",
+           birth=1988,
+           city="Москва",
+           email="..",
+           tel=".."))
+
+
+# Задание 3
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+
+
+def func(a, b, c):
+    list = [a, b, c]
+    list = sorted(list)
+    for el in list:
+        sum = list[1] + list[2]
+    return sum
+
+
+print(func(a, b, c))
+
+# Задание 4
+# v1
+def my_func (x, y):
+    ans = x ** (1 / y)
+    return ans
+print(my_func(3, -2))
+
+# v2
+def my_func (x, y):
+    ans = pow(x, 1 / y)
+    return ans
+print(my_func(3, -2))
+
+a = list(map(int, input("Введите числа через пробел: ").split()))
+print(a)
+
+
+
+# Задание 6
+word_1 = str(input("введите слово1: "))
+word_2 = str(input("введите слово2: "))
+word_3 = str(input("введите слово3: "))
+
+def int_func (word_1, word_2, word_3):
+    words = word_1 + " " + word_2 + " " + word_3
+    words.lower()
+    return words.title()
+
+print(int_func(word_1, word_2, word_3))
