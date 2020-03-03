@@ -1,0 +1,50 @@
+#  Задание 1 #
+
+list = [1, 2.252, 'story', [5, 6, 7], ('if', 'yes', 'no'), False, None, {2, 5, 25}, {"tree": [2, 4]}]
+
+for el in list:
+    print(f'Индекс[{list.index(el)}] - тип {type(el)}')
+
+
+
+# Задание 2
+str = input(" Введите цифры и буквы через пробел: ")
+list = str.split(' ')
+
+print(list)
+
+for i in range(0, len(list) - 1, 2):
+    list[i], list[i + 1] = list[i + 1], list[i]
+print(list)
+
+# Задание 3
+#v1
+list = ['', 'зима', 'зима', 'весна', 'весна', 'весна', 'лето', 'лето', 'лето', 'осень', 'осень', 'осень', 'зима']
+i = int(input("Введите номер месяца: "))
+
+print(list[i])
+
+# Задание 4 #
+str = 'мои добросердечный друг помог мне с самоорганизацией'
+words = str.split(' ')
+
+for i, words in enumerate(words):
+    print(i, words[:10])
+# Задание 5
+
+x = int(input('Введите целое положительное число: '))
+list = [7, 5, 3, 3, 2]
+list2 = sorted(list)
+
+if x < list2[0]:
+    list.append(x)
+else:
+    for i, el in enumerate(list):
+        if x >= el:
+            list.insert(i, x)
+            break
+print(list)
+
+
+
+
